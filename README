@@ -1,3 +1,19 @@
-You should go to your google account's parameters, and generate an application specific password :
-Account overview > Security > Authorising applications & sites > Generate a new application-specific password for this program, which will allow it to connect to PicasaWeb
+OpenPhoto export tool for PicasaWeb
 
+This will create .json description files for pictures of one of your
+PicasaWeb albums, which will be suitable for the OpenPhoto importer.
+
+To be able to connect to Picasaweb, you first should go to your google
+account's parameters, and generate an application specific password :
+ Account overview > Security > Authorising applications & sites >
+ Generate a new application-specific password for this program, which
+ will allow it to connect to PicasaWeb
+
+This generated password will be provided with --app-password (along
+with your google email passed to --login) to fetch.py.
+
+Run the fetch.py tool once to fetch album ids, and then re-run it with
+--album-id to fetch that album's photo .json descriptions in the
+'fetched/' subdir
+
+This is only a very early alpha, and no guarantee is made whatsoever.
