@@ -82,7 +82,7 @@ def fetch(login, app_password, albumid = None):
             for tag in tags.entry:
                 tagsl.append(tag.title.text)
             if tagsl :
-                p['tags'] = tagsl
+                p['tags'] = ",".join(tagsl)
             
             epoch = float(photo.timestamp.text)/1000
             p['dateTaken'] = int(time.mktime(time.gmtime(epoch)))
